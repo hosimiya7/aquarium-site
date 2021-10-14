@@ -1,46 +1,125 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="reset.css">
 
     <title>星駆水族館</title>
 </head>
+
 <body>
+
     <header>
         <div class="header-wrapper">
             <div class="header-top flex">
-                <img src="img/logo.png" alt="">
+                <img src="img/logo.png" alt="" class="logo">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
-                  </div>
+                </div>
 
-                  <nav class="globalMenuSp">
-                      <ul>
-                          <li><a href="#">トップページ</a></li>
-                          <li><a href="#">営業時間・料金</a></li>
-                          <li><a href="#">イベント情報</a></li>
-                          <li><a href="#">館内案内</a></li>
-                          <li><a href="#">アクセス</a></li>
-                      </ul>
-                  </nav>
+                <nav class="globalMenuSp">
+                    <ul>
+                        <li><a href="#top">トップページ</a></li>
+                        <li><a href="#business">営業時間・料金</a></li>
+                        <li><a href="#event">イベント情報</a></li>
+                        <li><a href="#guide">館内案内</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="header-content">
+                <div class="swiper-container">
+                    <!-- 全スライドをまとめるラッパー -->
+                    <div class="swiper-wrapper">
+                        <!-- 各スライド -->
+                        <ul class="slider">
+                            <li><img src="img/dolphin.jpg" alt=""></li>
+                            <li><img src="img/penguins.jpg" alt=""></li>
+                            <li><img src="img/tropical-fish.jpg" alt=""></li>
+                            <li><img src="img/darkfish.jpg" alt=""></li>
+                            <li><img src="img/jellyfish.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>
+                    海の仲間に<br>
+                    会いに行こう
+                </h2>
+                <div class="header-img">
+                    <img src="img/header-min-fish.jpg" alt="" class="header-img-left">
+                    <img src="img/header-fish.jpg" alt="" class="header-img-right">
+                </div>
+            </div>
+            <div class="header-background">
+                <div class="bubble-top">
+                    <div class="bubble-top-small">
 
+                    </div>
+                    <div class="bubble-top-large">
+
+                    </div>
+                </div>
+
+                <div class="bubble-bottom">
+                    <div class="bubble-bottom-large">
+
+                    </div>
+                    <div class="bubble-bottom-small">
+
+                    </div>
+                    <div class="bubble-bottom-small bubble-bottom-last">
+
+                    </div>
+                </div>
+
+
+                <div class="fish">
+                    <img src="img/fish-orange.png" alt="" class="header-fish-orange">
+                    <img src="img/fish-yellow.png" alt="" class="header-fish-yellow">
+                </div>
+            </div>
         </div>
     </header>
-    <main>
 
+    <main>
+        <div class="main-wrapper">
+            <div class="business content-wrapper">
+                <h3>
+                    営業時間・料金
+                </h3>
+            </div>
+            <div class="event  content-wrapper">
+                <h3>
+                    イベント情報
+                </h3>
+            </div>
+            <div class="guide  content-wrapper">
+                <h3>
+                    館内案内
+                </h3>
+            </div>
+            <div class="access  content-wrapper">
+                <h3>
+                    アクセス
+                </h3>
+            </div>
+        </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
