@@ -89,7 +89,7 @@ nav.globalMenuSp {
 }
 
 nav.globalMenuSp ul {
-  background: #4da2e3;
+  background: #2079bd;
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -108,7 +108,7 @@ nav.globalMenuSp ul li:last-child {
 }
 
 nav.globalMenuSp ul li:hover {
-  background: #2079bd;
+  background: #4da2e3;
 }
 
 nav.globalMenuSp ul li a {
@@ -138,6 +138,160 @@ nav.globalMenuSp.active {
   border-radius: 54% 46% 62% 38% / 51% 45% 55% 49%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*====================================================================
+アコーディオンメニュー
+====================================================================*/
+.s_07 .accordion_one {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+
+.s_07 .accordion_one .accordion_header {
+  background-color: #2079bd;
+  border-bottom: 1px solid #222;
+  color: #222;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 20px 11%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+  background-color: #2079bd;
+}
+
+.s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header:hover {
+  background-color: #4da2e3;
+}
+
+.s_07 .accordion_one:nth-of-type(2) .accordion_header {
+  background-color: #2079bd;
+}
+
+.s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+  background-color: #2079bd;
+}
+
+.s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header:hover {
+  background-color: #4da2e3;
+}
+
+.s_07 .accordion_one:nth-of-type(3) .accordion_header {
+  background-color: #2079bd;
+}
+
+.s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+  background-color: #2079bd;
+}
+
+.s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header:hover {
+  background-color: #4da2e3;
+}
+
+.s_07 .accordion_one .accordion_header:hover {
+  opacity: .8;
+}
+
+.s_07 .accordion_one .accordion_header .i_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #222;
+  margin-top: -20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.s_07 .accordion_one .accordion_header .i_box .one_i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  position: relative;
+}
+
+.s_07 .accordion_one .accordion_header.open .i_box {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+.s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  background-color: #222;
+  border-radius: 10px;
+  width: 18px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.s_07 .accordion_one .accordion_header .i_box .one_i:before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+  content: none;
+}
+
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.s_07 .accordion_one .accordion_inner {
+  display: none;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.s_07 .accordion_one .accordion_inner .box_one {
+  height: 300px;
+}
+
+.s_07 .accordion_one .accordion_inner p.txt_a_ac {
+  margin: 0;
 }
 
 /**
@@ -710,6 +864,39 @@ nav.globalMenuSp.active {
   color: #fff;
 }
 
+.guide .guide-slider .guide-dolphin {
+  background-image: url("img/point1.jpg");
+}
+
+.guide .guide-slider .guide-jellyfish {
+  background-image: url("img/point2.jpg");
+}
+
+.guide .guide-slider .guide-tank {
+  background-image: url("img/point3.jpg");
+}
+
+.guide .guide-slider .guide-penguin {
+  background-image: url("img/point4.jpg");
+}
+
+.guide .guide-slider .guide-tropical {
+  background-image: url("img/point5.jpg");
+}
+
+.guide .guide-slider .guide-night {
+  background-image: url("img/point6-2.jpg");
+}
+
+.guide .guide-slider .ripples {
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  margin: 7.5vw auto;
+  background-size: cover;
+  background-position: center;
+}
+
 .guide .guide-background .bubble-top {
   position: absolute;
   top: 5rem;
@@ -797,5 +984,45 @@ nav.globalMenuSp.active {
 .guide .guide-background .fish-bottom img {
   width: 40px;
   margin-bottom: 2rem;
+}
+
+.access {
+  margin-top: 4rem;
+}
+
+.access table {
+  margin: 2rem auto;
+  display: block;
+  width: 80vw;
+}
+
+.access table th {
+  padding: 0.5rem;
+  width: 80px;
+}
+
+.access table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.access iframe {
+  height: 250px;
+  width: 100%;
+}
+
+footer .raindrops {
+  height: 2em;
+  margin-top: -1.5em;
+}
+
+footer .footer-wrapper {
+  background-color: #2079bd;
+}
+
+footer .footer-copyright {
+  text-align: center;
+  margin: 3rem auto 0 auto;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=index.css.map */

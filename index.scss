@@ -116,7 +116,7 @@ nav.globalMenuSp {
 }
 
 nav.globalMenuSp ul {
-    background: $sub_color_lightBlue;
+    background: $sub_color_blue;
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -133,7 +133,7 @@ nav.globalMenuSp ul li:last-child {
     border-bottom: none;
 }
 nav.globalMenuSp ul li:hover {
-    background: $sub_color_blue;
+    background: $sub_color_lightBlue;
 }
 
 nav.globalMenuSp ul li a {
@@ -162,6 +162,126 @@ nav.globalMenuSp.active {
         object-fit: cover;
     }
 }
+
+/*====================================================================
+アコーディオンメニュー
+====================================================================*/
+.s_07 .accordion_one {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: block;
+  }
+  .s_07 .accordion_one .accordion_header {
+    background-color: $sub_color_blue;
+    border-bottom: 1px solid $font_color_black;
+    color: $font_color_black;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 20px 11%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    // @include mq(sm){
+    // }
+  }
+  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+    background-color: $sub_color_blue;
+    &:hover{
+      background-color: $sub_color_lightBlue;
+    }
+  }
+  .s_07 .accordion_one:nth-of-type(2) .accordion_header {
+    background-color: $sub_color_blue;
+  }
+  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+    background-color: $sub_color_blue;
+    &:hover{
+      background-color: $sub_color_lightBlue;
+    }
+  }
+  .s_07 .accordion_one:nth-of-type(3) .accordion_header {
+    background-color: $sub_color_blue;
+  }
+  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+    background-color: $sub_color_blue;
+    &:hover{
+      background-color: $sub_color_lightBlue;
+    }
+  }
+  .s_07 .accordion_one .accordion_header:hover {
+    opacity: .8;
+  }
+  .s_07 .accordion_one .accordion_header .i_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $font_color_black;
+    margin-top: -20px;
+    box-sizing: border-box;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+    position: relative;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+    display: flex;
+    content: '';
+    background-color: $font_color_black;
+    border-radius: 10px;
+    width: 18px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: center center;
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i:before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+    content: none;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .s_07 .accordion_one .accordion_inner {
+    display: none;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .s_07 .accordion_one .accordion_inner .box_one {
+    height: 300px;
+  }
+  .s_07 .accordion_one .accordion_inner p.txt_a_ac {
+    margin: 0;
+  }
 
 /**
  全体
@@ -668,6 +788,32 @@ nav.globalMenuSp.active {
             margin: 1rem auto 0 auto;
             color: $font_color_white;
         }
+        .guide-dolphin {
+            background-image: url("img/point1.jpg");
+        }
+        .guide-jellyfish {
+            background-image: url("img/point2.jpg");
+        }
+        .guide-tank {
+            background-image: url("img/point3.jpg");
+        }
+        .guide-penguin {
+            background-image: url("img/point4.jpg");
+        }
+        .guide-tropical {
+            background-image: url("img/point5.jpg");
+        }
+        .guide-night {
+            background-image: url("img/point6-2.jpg");
+        }
+        .ripples {
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            margin: 7.5vw auto;
+            background-size: cover;
+            background-position: center;
+        }
     }
     .guide-background {
         .bubble-top {
@@ -746,5 +892,41 @@ nav.globalMenuSp.active {
                 margin-bottom: 2rem;
             }
         }
+    }
+}
+
+.access {
+    margin-top: 4rem;
+    table {
+        margin: 2rem auto;
+        display: block;
+        width: 80vw;
+        th {
+            padding: 0.5rem;
+            width: 80px;
+        }
+        td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+    }
+    iframe{
+        height: 250px;
+        width: 100%;
+    }
+}
+
+footer{
+    .raindrops{
+        height: 2em;
+        margin-top: -1.5em;
+    }
+    .footer-wrapper{
+        background-color: $sub_color_blue;
+    }
+    .footer-copyright{
+        text-align: center;
+        margin: 3rem auto 0 auto;
+        padding-bottom: 1rem;
     }
 }
