@@ -546,7 +546,8 @@ nav.globalMenuSp.active {
 }
 
 .event {
-    margin-top: 4rem;
+    margin: 4rem 0;
+    position: relative;
     .event-slider{
         position: relative;
         i{
@@ -567,6 +568,7 @@ nav.globalMenuSp.active {
     }
     .event-content {
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     ul {
         li {
@@ -592,5 +594,79 @@ nav.globalMenuSp.active {
             }
         }
 
+    }
+    .event-background{
+        position: absolute;
+        top: 100%;
+        left: 80vw;
+        img{
+            width: 40px;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.guide{
+    margin-top: 4rem;
+    .wave{
+        margin-top: 1rem;
+    }
+    .guide-container{
+        background-color: $sub_color_blue;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+    .guide-slider{
+        position: relative;
+        .img-wrapper{
+            width: 75vw;
+            height: 75vw;
+            background-color: $main_color;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+        }
+        img{
+            width: 60vw;
+            height: 60vw;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 7.5vw auto;
+        }
+        .next{
+            position: absolute;
+            top: 50%;
+            right: 5vw;
+            background-color: $main_color;
+            z-index: 3;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+        .prev{
+            position: absolute;
+            top: 50%;
+            left: 5vw;
+            z-index: 3;
+            padding: 1rem;
+            border-radius: 50%;
+            background-color: $main_color;
+        }
+        i{
+            font-size: 2rem;
+            color: $sub_color_blue;
+        }
+        h4{
+            margin-top: 3rem;
+            color: $font_color_white;
+            font-size: 1.2rem;
+            text-align: center;
+            font-family: $font-text;
+            font-weight: bolder;
+        }
+        p{
+            width: 80vw;
+            margin: 1rem auto 0 auto;
+            color: $font_color_white;
+        }
     }
 }

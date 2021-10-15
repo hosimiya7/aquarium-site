@@ -565,7 +565,8 @@ nav.globalMenuSp.active {
 }
 
 .event {
-  margin-top: 4rem;
+  margin: 4rem 0;
+  position: relative;
 }
 
 .event .event-slider {
@@ -592,6 +593,7 @@ nav.globalMenuSp.active {
 
 .event .event-content {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .event ul li img {
@@ -616,5 +618,94 @@ nav.globalMenuSp.active {
   width: 80vw;
   margin: 0 auto;
   margin-top: 0.5rem;
+}
+
+.event .event-background {
+  position: absolute;
+  top: 100%;
+  left: 80vw;
+}
+
+.event .event-background img {
+  width: 40px;
+  margin-top: 1rem;
+}
+
+.guide {
+  margin-top: 4rem;
+}
+
+.guide .wave {
+  margin-top: 1rem;
+}
+
+.guide .guide-container {
+  background-color: #2079bd;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.guide .guide-slider {
+  position: relative;
+}
+
+.guide .guide-slider .img-wrapper {
+  width: 75vw;
+  height: 75vw;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.guide .guide-slider img {
+  width: 60vw;
+  height: 60vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 7.5vw auto;
+}
+
+.guide .guide-slider .next {
+  position: absolute;
+  top: 50%;
+  right: 5vw;
+  background-color: #fff;
+  z-index: 3;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.guide .guide-slider .prev {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  z-index: 3;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.guide .guide-slider i {
+  font-size: 2rem;
+  color: #2079bd;
+}
+
+.guide .guide-slider h4 {
+  margin-top: 3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "YuGoth";
+  font-weight: bolder;
+}
+
+.guide .guide-slider p {
+  width: 80vw;
+  margin: 1rem auto 0 auto;
+  color: #fff;
 }
 /*# sourceMappingURL=index.css.map */

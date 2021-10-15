@@ -40,3 +40,16 @@ $(function() {
 	nextArrow:'<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
   });
 
+  $('.guide-slider').slick({
+    fade:true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed:3000,
+    arrows:true,
+    prevArrow:'<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
+	nextArrow:'<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
+  });
+
