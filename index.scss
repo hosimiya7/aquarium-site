@@ -548,18 +548,18 @@ nav.globalMenuSp.active {
 .event {
     margin: 4rem 0;
     position: relative;
-    .event-slider{
+    .event-slider {
         position: relative;
-        i{
+        i {
             font-size: 2rem;
             color: $sub_color_night;
         }
-        .next{
+        .next {
             position: absolute;
             top: 50%;
             right: 5vw;
         }
-        .prev{
+        .prev {
             position: absolute;
             top: 50%;
             left: 5vw;
@@ -593,32 +593,32 @@ nav.globalMenuSp.active {
                 margin-top: 0.5rem;
             }
         }
-
     }
-    .event-background{
+    .event-background {
         position: absolute;
         top: 100%;
         left: 80vw;
-        img{
+        img {
             width: 40px;
             margin-top: 1rem;
         }
     }
 }
 
-.guide{
+.guide {
     margin-top: 4rem;
-    .wave{
+    position: relative;
+    .wave {
         margin-top: 1rem;
     }
-    .guide-container{
+    .guide-container {
         background-color: $sub_color_blue;
         padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
     }
-    .guide-slider{
+    .guide-slider {
         position: relative;
-        .img-wrapper{
+        .img-wrapper {
             width: 75vw;
             height: 75vw;
             background-color: $main_color;
@@ -626,14 +626,14 @@ nav.globalMenuSp.active {
             margin: 0 auto;
             display: flex;
         }
-        img{
+        img {
             width: 60vw;
             height: 60vw;
             object-fit: cover;
             border-radius: 50%;
             margin: 7.5vw auto;
         }
-        .next{
+        .next {
             position: absolute;
             top: 50%;
             right: 5vw;
@@ -642,7 +642,7 @@ nav.globalMenuSp.active {
             padding: 1rem;
             border-radius: 50%;
         }
-        .prev{
+        .prev {
             position: absolute;
             top: 50%;
             left: 5vw;
@@ -651,11 +651,11 @@ nav.globalMenuSp.active {
             border-radius: 50%;
             background-color: $main_color;
         }
-        i{
+        i {
             font-size: 2rem;
             color: $sub_color_blue;
         }
-        h4{
+        h4 {
             margin-top: 3rem;
             color: $font_color_white;
             font-size: 1.2rem;
@@ -663,10 +663,88 @@ nav.globalMenuSp.active {
             font-family: $font-text;
             font-weight: bolder;
         }
-        p{
+        p {
             width: 80vw;
             margin: 1rem auto 0 auto;
             color: $font_color_white;
+        }
+    }
+    .guide-background {
+        .bubble-top {
+            position: absolute;
+            top: 5rem;
+            left: 80vw;
+            .bubble-top-large {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $sub_color_lightBlue;
+                margin-left: 1rem;
+                margin-top: 0rem;
+                z-index: 4;
+            }
+            .bubble-top-small {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $main_color;
+                margin-top: 1rem;
+            }
+        }
+        .bubble-bottom {
+            position: absolute;
+            top: 280px;
+            left: 15vw;
+            .bubble-bottom-large {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $sub_color_lightBlue;
+                margin-left: 0rem;
+                margin-top: 1rem;
+            }
+            .bubble-bottom-small {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $main_color;
+                margin-left: 70vw;
+                margin-top: 0;
+            }
+            .bubble-bottom-last {
+                width: 15px;
+                height: 15px;
+                background-color: $sub_color_lightBlue;
+                margin-top: 1rem;
+                margin-left: 0rem;
+            }
+        }
+        .fish-top {
+            position: absolute;
+            top: 80px;
+            left: 5vw;
+            img {
+                width: 30px;
+                margin-bottom: 2rem;
+            }
+        }
+        .fish-center {
+            position: absolute;
+            top: 100px;
+            left: 10vw;
+            img {
+                width: 40px;
+                margin-bottom: 2rem;
+            }
+        }
+        .fish-bottom {
+            position: absolute;
+            bottom: 280px;
+            right: 10vw;
+            img {
+                width: 40px;
+                margin-bottom: 2rem;
+            }
         }
     }
 }
