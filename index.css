@@ -2,6 +2,11 @@
 /**
  初期設定
 */
+@font-face {
+  font-family: "YuGoth";
+  src: url(font/YuGothR.ttc);
+}
+
 /*　ハンバーガーボタン　*/
 .hamburger {
   display: block;
@@ -138,6 +143,10 @@ nav.globalMenuSp.active {
 /**
  全体
 */
+* {
+  font-family: "YuGoth";
+}
+
 /**
  ヘッダー
 */
@@ -160,6 +169,9 @@ nav.globalMenuSp.active {
   left: 24vw;
   color: #fff;
   font-size: 2rem;
+  font-family: irohamaru, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header-wrapper .header-img {
@@ -262,6 +274,21 @@ nav.globalMenuSp.active {
 .container h3 {
   text-align: center;
   font-size: 1.3rem;
+  font-family: irohamaru, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container h4 {
+  font-family: irohamaru, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container h5 {
+  font-family: irohamaru, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .business h3 {
@@ -279,9 +306,13 @@ nav.globalMenuSp.active {
   text-align: center;
 }
 
-.business-content p {
+.business-content h5 {
   color: #fff;
   font-size: 1.1rem;
+}
+
+.business-content p {
+  color: #fff;
 }
 
 .business-content .business-time-closed {
@@ -327,7 +358,7 @@ nav.globalMenuSp.active {
   margin-left: 5%;
 }
 
-.business-content .business-time-table-daytime p {
+.business-content .business-time-table-daytime h5 {
   margin-left: calc(5% + 25px);
   margin-top: -18px;
   margin-bottom: 1rem;
@@ -351,7 +382,7 @@ nav.globalMenuSp.active {
   margin-left: 5%;
 }
 
-.business-content .business-time-table-night p {
+.business-content .business-time-table-night h5 {
   margin-left: calc(5% + 25px);
   margin-top: -18px;
   margin-bottom: 1rem;
@@ -371,5 +402,73 @@ nav.globalMenuSp.active {
 
 .business-content .business-price h4 {
   margin-top: 3rem;
+}
+
+.business-content .business-price .table-head {
+  background-color: #ddd;
+}
+
+.business-content .business-price tr .daytime {
+  background-color: #f5e770;
+}
+
+.business-content .business-price tr .night {
+  background-color: #96aed3;
+}
+
+.business-content .business-price tr th:nth-child(2) {
+  border-left: 1px dotted #222;
+}
+
+.business-content .business-price tr th:nth-child(3) {
+  border-left: 1px dotted #222;
+}
+
+.business-content .business-price tr td:nth-child(2) {
+  border-left: 1px dotted #222;
+}
+
+.business-content .business-price tr td:nth-child(3) {
+  border-left: 1px dotted #222;
+}
+
+.business-content .business-price-discount {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.business-content .business-price-discount .discount-day {
+  background-color: #ffce48;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: #222;
+  text-align: center;
+  margin: auto;
+  padding-top: 12.5px;
+}
+
+.business-content .business-price-discount h5 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.business-content .business-price-discount .discount-content {
+  margin-top: 0.2rem;
+  padding-bottom: 3rem;
+}
+
+.business-content .business-price-discount .discount-content .conspicuous {
+  font-size: 1.5rem;
+  color: #ffce48;
+  font-weight: bold;
+}
+
+.business-content .business-price-discount .discount-content .dots {
+  padding-top: 0.4em;
+  background-position: top left 0px;
+  background-repeat: repeat-x;
+  background-size: 1em 0.3em;
+  background-image: radial-gradient(0.15em 0.15em at center center, #f5e770, #f5e770 100%, transparent);
 }
 /*# sourceMappingURL=index.css.map */

@@ -4,6 +4,11 @@
  初期設定
 */
 
+@font-face {
+    font-family: "YuGoth";
+    src: url(font/YuGothR.ttc);
+}
+
 $main_color: #fff;
 $font_color_black: #222;
 $font_color_white: #fff;
@@ -13,6 +18,9 @@ $sub_color_yellow: #ffce48;
 $sub_color_orange: #ff9148;
 $sub_color_daytime: #f5e770;
 $sub_color_night: #96aed3;
+
+$font-title: irohamaru, sans-serif;
+$font-text: "YuGoth";
 
 $breakpoints: (
     "md": "screen and (mix-width: 560px)",
@@ -159,6 +167,10 @@ nav.globalMenuSp.active {
  全体
 */
 
+* {
+    font-family: $font-text;
+}
+
 /**
  ヘッダー
 */
@@ -178,6 +190,9 @@ nav.globalMenuSp.active {
         left: 24vw;
         color: #fff;
         font-size: 2rem;
+        font-family: $font-title;
+        font-weight: 400;
+        font-style: normal;
     }
     .header-img {
         margin-top: -5rem;
@@ -271,6 +286,19 @@ nav.globalMenuSp.active {
     h3 {
         text-align: center;
         font-size: 1.3rem;
+        font-family: $font-title;
+        font-weight: 500;
+        font-style: normal;
+    }
+    h4 {
+        font-family: $font-title;
+        font-weight: 500;
+        font-style: normal;
+    }
+    h5 {
+        font-family: $font-title;
+        font-weight: 400;
+        font-style: normal;
     }
 }
 
@@ -287,16 +315,18 @@ nav.globalMenuSp.active {
         font-size: 1.2rem;
         text-align: center;
     }
-    p{
+    h5 {
         color: $font_color_white;
         font-size: 1.1rem;
     }
-    .business-time-closed{
+    p {
+        color: $font_color_white;
+    }
+    .business-time-closed {
         text-align: center;
         margin-top: 1rem;
     }
     table {
-
         border-radius: 10px;
         margin: 0 auto;
         width: 90%;
@@ -320,14 +350,14 @@ nav.globalMenuSp.active {
     }
     .business-time-table-daytime {
         margin-top: 2rem;
-        .background-circle{
+        .background-circle {
             width: 20px;
             height: 20px;
             border-radius: 50%;
             background-color: $sub_color_daytime;
             margin-left: 5%;
         }
-        p{
+        h5 {
             margin-left: calc(5% + 25px);
             margin-top: -18px;
             margin-bottom: 1rem;
@@ -340,33 +370,94 @@ nav.globalMenuSp.active {
     }
     .business-time-table-night {
         margin-top: 2rem;
-        .background-circle{
+        .background-circle {
             width: 20px;
             height: 20px;
             border-radius: 50%;
             background-color: $sub_color_night;
             margin-left: 5%;
         }
-        p{
+        h5 {
             margin-left: calc(5% + 25px);
             margin-top: -18px;
             margin-bottom: 1rem;
         }
         th {
             background-color: $sub_color_night;
-            &:nth-child(2){
+            &:nth-child(2) {
                 border-left: 1px dotted $font_color_black;
             }
         }
-        td{
-            &:nth-child(2){
+        td {
+            &:nth-child(2) {
                 border-left: 1px dotted $font_color_black;
             }
         }
     }
-    .business-price{
-        h4{
+    .business-price {
+        h4 {
             margin-top: 3rem;
+        }
+        .table-head {
+            background-color: #ddd;
+        }
+        tr {
+            .daytime {
+                background-color: $sub_color_daytime;
+            }
+            .night {
+                background-color: $sub_color_night;
+            }
+            th {
+                &:nth-child(2) {
+                    border-left: 1px dotted $font_color_black;
+                }
+                &:nth-child(3) {
+                    border-left: 1px dotted $font_color_black;
+                }
+            }
+            td {
+                &:nth-child(2) {
+                    border-left: 1px dotted $font_color_black;
+                }
+                &:nth-child(3) {
+                    border-left: 1px dotted $font_color_black;
+                }
+            }
+        }
+    }
+    .business-price-discount {
+        margin-top: 1rem;
+        text-align: center;
+        .discount-day {
+            background-color: $sub_color_yellow;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: $font_color_black;
+            text-align: center;
+            margin: auto;
+            padding-top: 12.5px;
+        }
+        h5 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        .discount-content {
+            margin-top: 0.2rem;
+            padding-bottom: 3rem;
+            .conspicuous {
+                font-size: 1.5rem;
+                color: $sub_color_yellow;
+                font-weight: bold;
+            }
+            .dots {
+                padding-top: 0.4em;
+                background-position: top left 0px;
+                background-repeat: repeat-x;
+                background-size: 1em 0.3em;
+                background-image: radial-gradient(0.15em 0.15em at center center, #f5e770, #f5e770 100%, transparent);
+            }
         }
     }
 }
