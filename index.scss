@@ -11,6 +11,8 @@ $sub_color_blue: #2079bd;
 $sub_color_lightBlue: #4da2e3;
 $sub_color_yellow: #ffce48;
 $sub_color_orange: #ff9148;
+$sub_color_daytime: #f5e770;
+$sub_color_night: #96aed3;
 
 $breakpoints: (
     "md": "screen and (mix-width: 560px)",
@@ -162,7 +164,7 @@ nav.globalMenuSp.active {
 */
 
 .header-wrapper {
-    height: 100vh;
+    height: 85vh;
     .logo {
         width: 80px;
         margin: 1rem 0 0 1rem;
@@ -204,12 +206,11 @@ nav.globalMenuSp.active {
             position: absolute;
             top: 1rem;
             left: 65vw;
-            .bubble-top-small{
+            .bubble-top-small {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $sub_color_lightBlue;
-
             }
             .bubble-top-large {
                 width: 30px;
@@ -220,7 +221,7 @@ nav.globalMenuSp.active {
                 margin-top: 0.5rem;
             }
         }
-        .bubble-bottom{
+        .bubble-bottom {
             position: absolute;
             top: 320px;
             left: 50vw;
@@ -232,33 +233,31 @@ nav.globalMenuSp.active {
                 margin-left: -2rem;
                 margin-top: 1rem;
             }
-            .bubble-bottom-small{
+            .bubble-bottom-small {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $sub_color_blue;
                 margin-left: 2rem;
                 margin-top: 1.5rem;
-
             }
-            .bubble-bottom-last{
+            .bubble-bottom-last {
                 background-color: $sub_color_lightBlue;
                 margin-top: 2rem;
                 margin-left: -1rem;
             }
         }
-        .fish{
+        .fish {
             position: absolute;
             top: 350px;
             left: 20px;
-            .header-fish-orange{
+            .header-fish-orange {
                 width: 60px;
                 margin-bottom: 2rem;
             }
-            .header-fish-yellow{
+            .header-fish-yellow {
                 width: 40px;
                 margin-top: 3rem;
-
             }
         }
     }
@@ -268,6 +267,106 @@ nav.globalMenuSp.active {
  メイン
 */
 
-.content-wrapper{
+.container {
+    h3 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
 
+.business {
+    h3 {
+        margin-bottom: 1rem;
+    }
+}
+.business-content {
+    background-color: $sub_color_blue;
+    padding-top: 4rem;
+    h4 {
+        color: $font_color_white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    p{
+        color: $font_color_white;
+        font-size: 1.1rem;
+    }
+    .business-time-closed{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    table {
+
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 90%;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        th {
+            text-align: center;
+            padding: 0.5rem 0;
+            font-weight: normal;
+        }
+        td {
+            text-align: center;
+            padding: 0.5rem 0;
+            background-color: $main_color;
+        }
+        table tbody tr:last-child th,
+        table tbody tr:last-child td {
+            border-bottom: none;
+        }
+    }
+    .business-time-table-daytime {
+        margin-top: 2rem;
+        .background-circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $sub_color_daytime;
+            margin-left: 5%;
+        }
+        p{
+            margin-left: calc(5% + 25px);
+            margin-top: -18px;
+            margin-bottom: 1rem;
+        }
+        th {
+            background-color: $sub_color_daytime;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+    .business-time-table-night {
+        margin-top: 2rem;
+        .background-circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $sub_color_night;
+            margin-left: 5%;
+        }
+        p{
+            margin-left: calc(5% + 25px);
+            margin-top: -18px;
+            margin-bottom: 1rem;
+        }
+        th {
+            background-color: $sub_color_night;
+            &:nth-child(2){
+                border-left: 1px dotted $font_color_black;
+            }
+        }
+        td{
+            &:nth-child(2){
+                border-left: 1px dotted $font_color_black;
+            }
+        }
+    }
+    .business-price{
+        h4{
+            margin-top: 3rem;
+        }
+    }
 }
