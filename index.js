@@ -26,36 +26,67 @@ $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 2500,
     arrows: false,
+
 });
 
-$('.event-slider').slick({
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    arrows: true,
-    prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
-    nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
-});
+// $('.event-slider').slick({
+//     infinite: true,
+//     speed: 1000,
+//     slidesToShow: 1,
+//     adaptiveHeight: true,
+//     autoplay: true,
+//     autoplaySpeed: 2500,
+//     arrows: true,
+//     prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
+//     nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
+// });
 
-$('.guide-slider').slick({
-    fade: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
-    nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
+ function checkBreakPoint() {
+	w = $(window).width();
+	if (w <= 900) {
+		// スマホ向け（767px以下のとき）
+		$('.event-slider').not('.slick-initialized').slick({
+			//スライドさせる
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
+            nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
+		});
+        $('.guide-slider').slick({
+            fade: true,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
+            nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
+        });
+	} else {
+		// PC向け
+		$('.event-slider.slick-initialized').slick('unslick');
+		$('.guide-slider.slick-initialized').slick('unslick');
+	}
+}
+// ウインドウがリサイズする度にチェック
+$(window).resize(function(){
+	checkBreakPoint();
 });
+// 初回チェック
+checkBreakPoint();
+
+
 
 // 波紋
 $('.ripples').ripples({
-    resolution: 400,
+    resolution: 200,
 });
 
 // raindrops

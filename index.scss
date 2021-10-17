@@ -184,6 +184,9 @@ nav.globalMenuSp.active {
     max-width: 1024px;
     margin: 0 auto;
     display: block;
+    @include mq(lg) {
+        display: none;
+    }
 }
 .s_07 .accordion_one .accordion_header {
     background-color: $sub_color_blue;
@@ -197,8 +200,6 @@ nav.globalMenuSp.active {
     z-index: 1;
     cursor: pointer;
     transition-duration: 0.2s;
-    // @include mq(sm){
-    // }
 }
 .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
     background-color: $sub_color_blue;
@@ -307,7 +308,9 @@ nav.globalMenuSp.active {
 }
 
 .flex {
-    display: flex;
+    @include mq(lg) {
+        display: flex;
+    }
 }
 
 /**
@@ -322,7 +325,7 @@ nav.globalMenuSp.active {
     .header-top {
         justify-content: space-between;
     }
-    .header-heading{
+    .header-heading {
         display: none;
         @include mq(lg) {
             display: inline-block;
@@ -330,7 +333,7 @@ nav.globalMenuSp.active {
             margin-right: 2rem;
             z-index: 4;
             font-size: 1.2rem;
-            li{
+            li {
                 margin-left: 2rem;
             }
         }
@@ -359,7 +362,6 @@ nav.globalMenuSp.active {
             top: 4rem;
             left: 22vw;
         }
-
     }
     .header-img {
         margin-top: -5rem;
@@ -370,7 +372,7 @@ nav.globalMenuSp.active {
             margin-top: -7rem;
         }
         @include mq(lg) {
-           margin-top: -16rem;
+            margin-top: -16rem;
         }
         .header-img-left {
             width: 30vw;
@@ -543,7 +545,6 @@ nav.globalMenuSp.active {
         font-weight: 400;
         font-style: normal;
         @include mq(lg) {
-            font-size: 1.2rem;
         }
     }
 }
@@ -556,14 +557,19 @@ nav.globalMenuSp.active {
     .business-content {
         background-color: $sub_color_blue;
         padding-top: 4rem;
+        @include mq(lg) {
+            margin-top: -0.5rem;
+        }
         h4 {
             color: $font_color_white;
-            font-size: 1.2rem;
             text-align: center;
         }
         h5 {
             color: $font_color_white;
             font-size: 1.1rem;
+            @include mq(lg) {
+                font-size: 1.3rem;
+            }
         }
         p {
             color: $font_color_white;
@@ -579,10 +585,13 @@ nav.globalMenuSp.active {
             border-collapse: separate;
             border-spacing: 0;
             overflow: hidden;
+            @include mq(lg) {
+                width: 600px;
+            }
             th {
                 text-align: center;
                 padding: 0.5rem 0;
-                font-weight: normal;
+                font-weight: bold;
             }
             td {
                 text-align: center;
@@ -595,18 +604,25 @@ nav.globalMenuSp.active {
             }
         }
         .business-time-table-daytime {
-            margin-top: 2rem;
+            margin-top: 1rem;
             .background-circle {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $sub_color_daytime;
                 margin-left: 5%;
+                @include mq(lg) {
+                    margin-left: calc(50vw - 60px);
+                }
             }
             h5 {
                 margin-left: calc(5% + 25px);
                 margin-top: -18px;
                 margin-bottom: 1rem;
+                @include mq(lg) {
+                    text-align: center;
+                    margin-left: 0;
+                }
             }
             th {
                 background-color: $sub_color_daytime;
@@ -615,18 +631,25 @@ nav.globalMenuSp.active {
             }
         }
         .business-time-table-night {
-            margin-top: 2rem;
+            margin-top: 1rem;
             .background-circle {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $sub_color_night;
                 margin-left: 5%;
+                @include mq(lg) {
+                    margin-left: calc(50vw - 100px);
+                }
             }
             h5 {
                 margin-left: calc(5% + 25px);
                 margin-top: -18px;
                 margin-bottom: 1rem;
+                @include mq(lg) {
+                    text-align: center;
+                    margin-left: 0;
+                }
             }
             th {
                 background-color: $sub_color_night;
@@ -643,7 +666,9 @@ nav.globalMenuSp.active {
         .business-price {
             h4 {
                 margin-top: 3rem;
-                margin-bottom: 1rem;
+            }
+            table {
+                margin-top: 1rem;
             }
             .table-head {
                 background-color: #ddd;
@@ -687,7 +712,6 @@ nav.globalMenuSp.active {
                 padding-top: 12.5px;
             }
             h5 {
-                font-size: 1.1rem;
                 margin-top: 1rem;
             }
             .discount-content {
@@ -718,6 +742,9 @@ nav.globalMenuSp.active {
             position: absolute;
             top: 1rem;
             left: 5vw;
+            @include mq(lg) {
+                margin-top: 2rem;
+            }
             .bubble-top-large {
                 width: 30px;
                 height: 30px;
@@ -725,6 +752,10 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-left: 1rem;
                 margin-top: 0rem;
+                @include mq(lg) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
             .bubble-top-small {
                 width: 20px;
@@ -732,12 +763,20 @@ nav.globalMenuSp.active {
                 border-radius: 50%;
                 background-color: $main_color;
                 margin-top: 1rem;
+                @include mq(lg) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
         .bubble-bottom {
             position: absolute;
             top: 660px;
             left: 85vw;
+            @include mq(lg) {
+                top: 700px;
+                left: 90vw;
+            }
             .bubble-bottom-large {
                 width: 30px;
                 height: 30px;
@@ -745,6 +784,11 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-left: -1rem;
                 margin-top: 1rem;
+                @include mq(lg) {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: -3rem;
+                }
             }
             .bubble-bottom-small {
                 width: 20px;
@@ -753,6 +797,11 @@ nav.globalMenuSp.active {
                 background-color: $main_color;
                 margin-left: 0.2rem;
                 margin-top: 1.5rem;
+                @include mq(lg) {
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 2rem;
+                }
             }
             .bubble-bottom-last {
                 width: 15px;
@@ -760,24 +809,41 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-top: 2rem;
                 margin-left: 0rem;
+                @include mq(lg) {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
         .fish-top {
             position: absolute;
             top: 80px;
             left: 80vw;
+            @include mq(lg) {
+                top: 100px;
+            }
             img {
                 width: 30px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 50px;
+                    margin-bottom: 0;
+                }
             }
         }
         .fish-center {
             position: absolute;
             top: 304px;
             left: 75vw;
+            @include mq(lg) {
+                left: 85vw;
+            }
             img {
                 width: 40px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 55px;
+                }
             }
         }
         .fish-bottom {
@@ -787,6 +853,9 @@ nav.globalMenuSp.active {
             img {
                 width: 40px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 70px;
+                }
             }
         }
     }
@@ -795,8 +864,16 @@ nav.globalMenuSp.active {
 .event {
     margin: 4rem 0;
     position: relative;
+    @include mq(lg) {
+        margin-top: 12rem;
+    }
     .event-slider {
         position: relative;
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
         i {
             font-size: 2rem;
             color: $sub_color_night;
@@ -819,25 +896,40 @@ nav.globalMenuSp.active {
     }
     ul {
         li {
+            @include mq(lg) {
+                width: 45vw;
+                margin-top: 2rem;
+            }
             img {
                 width: 70vw;
                 margin: 0 auto;
                 border-radius: 10px;
+                @include mq(lg) {
+                    width: 40vw;
+                    height: 28vw;
+                    margin-left: 2.5vw;
+                }
             }
             h4 {
                 text-align: center;
                 margin-top: 0.5rem;
-                font-size: 1.2rem;
             }
             .event-schedule {
                 text-align: center;
                 font-weight: bold;
                 margin-top: 0.5rem;
+                @include mq(lg) {
+                    width: 40vw;
+                    margin: 0.5rem auto;
+                }
             }
             .event-explanation {
                 width: 80vw;
                 margin: 0 auto;
                 margin-top: 0.5rem;
+                @include mq(lg) {
+                    width: 40vw;
+                }
             }
         }
     }
@@ -845,6 +937,10 @@ nav.globalMenuSp.active {
         position: absolute;
         top: 100%;
         left: 80vw;
+        @include mq(lg) {
+            left: 95vw;
+            top: 101%;
+        }
         img {
             width: 40px;
             margin-top: 1rem;
@@ -855,6 +951,9 @@ nav.globalMenuSp.active {
 .guide {
     margin-top: 4rem;
     position: relative;
+    @include mq(lg) {
+        margin-top: 12rem;
+    }
     .wave {
         margin-top: 1rem;
     }
@@ -862,6 +961,10 @@ nav.globalMenuSp.active {
         background-color: $sub_color_blue;
         padding-top: 3rem;
         padding-bottom: 3rem;
+        @include mq(lg) {
+            padding-bottom: 6rem;
+            margin-top: -0.5rem;
+        }
     }
     .guide-slider {
         position: relative;
@@ -872,6 +975,10 @@ nav.globalMenuSp.active {
             border-radius: 50%;
             margin: 0 auto;
             display: flex;
+            @include mq(lg) {
+                width: 25vw;
+                height: 25vw;
+            }
         }
         img {
             width: 60vw;
@@ -879,6 +986,10 @@ nav.globalMenuSp.active {
             object-fit: cover;
             border-radius: 50%;
             margin: 7.5vw auto;
+            @include mq(lg) {
+                width: 20vw;
+                height: 20vw;
+            }
         }
         .next {
             position: absolute;
@@ -905,7 +1016,6 @@ nav.globalMenuSp.active {
         h4 {
             margin-top: 3rem;
             color: $font_color_white;
-            font-size: 1.2rem;
             text-align: center;
             font-family: $font-text;
             font-weight: bolder;
@@ -914,6 +1024,9 @@ nav.globalMenuSp.active {
             width: 80vw;
             margin: 1rem auto 0 auto;
             color: $font_color_white;
+            @include mq(lg) {
+                width: 20vw;
+            }
         }
         .ripples {
             width: 60vw;
@@ -923,6 +1036,11 @@ nav.globalMenuSp.active {
             background-size: cover;
             background-position: center;
             overflow: hidden;
+            @include mq(lg) {
+                width: 20vw;
+                height: 20vw;
+                margin-top: 2.5vw;
+            }
         }
         .guide-dolphin {
             border-radius: 50%;
@@ -944,6 +1062,18 @@ nav.globalMenuSp.active {
             background-image: url("img/point6-2.jpg");
         }
     }
+    @include mq(lg) {
+        .guide-slider-left {
+            display: inline-block;
+            margin-left: 20vw;
+        }
+        .guide-slider-right {
+            display: inline-block;
+            margin-top: 3rem;
+            margin-left: 10vw;
+        }
+    }
+
     .guide-background {
         .bubble-top {
             position: absolute;
@@ -957,6 +1087,11 @@ nav.globalMenuSp.active {
                 margin-left: 0.5rem;
                 margin-top: 0rem;
                 z-index: 4;
+                @include mq(lg) {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 2rem;
+                }
             }
             .bubble-top-small {
                 width: 20px;
@@ -964,12 +1099,20 @@ nav.globalMenuSp.active {
                 border-radius: 50%;
                 background-color: $main_color;
                 margin-top: 1rem;
+                @include mq(lg) {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
         .bubble-bottom {
             position: absolute;
-            top: 280px;
+            top: 65vw;
             left: 15vw;
+            @include mq(lg) {
+                top: 90%;
+                left: 5vw;
+            }
             .bubble-bottom-large {
                 width: 30px;
                 height: 30px;
@@ -977,6 +1120,10 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-left: 0rem;
                 margin-top: 1rem;
+                @include mq(lg) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
             .bubble-bottom-small {
                 width: 20px;
@@ -985,6 +1132,12 @@ nav.globalMenuSp.active {
                 background-color: $main_color;
                 margin-left: 70vw;
                 margin-top: 0;
+                @include mq(lg) {
+                    margin-left: 20px;
+                    margin-top: 3rem;
+                    width: 30px;
+                    height: 30px;
+                }
             }
             .bubble-bottom-last {
                 width: 15px;
@@ -992,6 +1145,10 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-top: 1rem;
                 margin-left: 0rem;
+                @include mq(lg) {
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
         .fish-top {
@@ -1001,6 +1158,9 @@ nav.globalMenuSp.active {
             img {
                 width: 30px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 60px;
+                }
             }
         }
         .fish-center {
@@ -1010,15 +1170,26 @@ nav.globalMenuSp.active {
             img {
                 width: 40px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 80px;
+                }
             }
         }
         .fish-bottom {
             position: absolute;
             bottom: 280px;
             right: 10vw;
+            @include mq(lg) {
+                right: 3vw;
+                bottom: 5%;
+            }
             img {
                 width: 40px;
                 margin-bottom: 2rem;
+                @include mq(lg) {
+                    width: 100px;
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -1026,10 +1197,21 @@ nav.globalMenuSp.active {
 
 .access {
     margin-top: 4rem;
+    @include mq(lg) {
+        margin-top: 8rem;
+    }
+    .flex {
+        justify-content: space-around;
+        margin-top: 4rem;
+    }
     table {
         margin: 2rem auto;
         display: block;
         width: 80vw;
+        @include mq(lg) {
+            width: initial;
+            margin-top: 100px;
+        }
         th {
             padding: 0.5rem;
             width: 80px;
@@ -1042,6 +1224,10 @@ nav.globalMenuSp.active {
     iframe {
         height: 250px;
         width: 100%;
+        @include mq(lg) {
+            width: 50vw;
+            height: 400px;
+        }
     }
 }
 
@@ -1052,10 +1238,64 @@ footer {
     }
     .footer-wrapper {
         background-color: $sub_color_blue;
+        margin-top: -0.5rem;
+    }
+    .flex {
+        @include mq(lg) {
+            justify-content: center;
+        }
+    }
+    .footer-list {
+        display: none;
+        @include mq(lg) {
+            padding: 2rem 0;
+            display: block;
+            background-color: $sub_color_blue;
+            margin: 0 0.5rem;
+            p {
+                font-weight: bold;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+                position: relative;
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: "▼";
+                    width: 0.5em;
+                    height: 0.5em;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            li {
+                position: relative;
+                padding: 0.1em;
+                padding-left: 1em;
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0.7em;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    width: 0.3em;
+                    height: 0.3em;
+                    border-top: 1px solid $font_color_black;
+                    border-right: 1px solid $font_color_black;
+                }
+            }
+            a {
+                &:hover{
+                    color: $font_color_white;
+                }
+            }
+        }
     }
     .footer-copyright {
         text-align: center;
-        margin: 3rem auto 0 auto;
-        padding-bottom: 1rem;
+        padding: 3rem 0 1rem 0;
+        background-color: $sub_color_blue;
     }
 }

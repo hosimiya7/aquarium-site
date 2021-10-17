@@ -175,6 +175,12 @@ nav.globalMenuSp.active {
   display: block;
 }
 
+@media screen and (min-width: 900px) {
+  .s_07 .accordion_one {
+    display: none;
+  }
+}
+
 .s_07 .accordion_one .accordion_header {
   background-color: #2079bd;
   border-bottom: 1px solid #222;
@@ -328,10 +334,12 @@ nav.globalMenuSp.active {
   font-family: "YuGoth";
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 900px) {
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 /**
@@ -654,12 +662,6 @@ nav.globalMenuSp.active {
   font-style: normal;
 }
 
-@media screen and (min-width: 900px) {
-  .container h5 {
-    font-size: 1.2rem;
-  }
-}
-
 .business {
   position: relative;
 }
@@ -673,15 +675,26 @@ nav.globalMenuSp.active {
   padding-top: 4rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content {
+    margin-top: -0.5rem;
+  }
+}
+
 .business .business-content h4 {
   color: #fff;
-  font-size: 1.2rem;
   text-align: center;
 }
 
 .business .business-content h5 {
   color: #fff;
   font-size: 1.1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-content h5 {
+    font-size: 1.3rem;
+  }
 }
 
 .business .business-content p {
@@ -702,10 +715,16 @@ nav.globalMenuSp.active {
   overflow: hidden;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content table {
+    width: 600px;
+  }
+}
+
 .business .business-content table th {
   text-align: center;
   padding: 0.5rem 0;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .business .business-content table td {
@@ -720,7 +739,7 @@ nav.globalMenuSp.active {
 }
 
 .business .business-content .business-time-table-daytime {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .business .business-content .business-time-table-daytime .background-circle {
@@ -731,10 +750,23 @@ nav.globalMenuSp.active {
   margin-left: 5%;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content .business-time-table-daytime .background-circle {
+    margin-left: calc(50vw - 60px);
+  }
+}
+
 .business .business-content .business-time-table-daytime h5 {
   margin-left: calc(5% + 25px);
   margin-top: -18px;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-content .business-time-table-daytime h5 {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .business .business-content .business-time-table-daytime th {
@@ -744,7 +776,7 @@ nav.globalMenuSp.active {
 }
 
 .business .business-content .business-time-table-night {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .business .business-content .business-time-table-night .background-circle {
@@ -755,10 +787,23 @@ nav.globalMenuSp.active {
   margin-left: 5%;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content .business-time-table-night .background-circle {
+    margin-left: calc(50vw - 100px);
+  }
+}
+
 .business .business-content .business-time-table-night h5 {
   margin-left: calc(5% + 25px);
   margin-top: -18px;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-content .business-time-table-night h5 {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .business .business-content .business-time-table-night th {
@@ -775,7 +820,10 @@ nav.globalMenuSp.active {
 
 .business .business-content .business-price h4 {
   margin-top: 3rem;
-  margin-bottom: 1rem;
+}
+
+.business .business-content .business-price table {
+  margin-top: 1rem;
 }
 
 .business .business-content .business-price .table-head {
@@ -823,7 +871,6 @@ nav.globalMenuSp.active {
 }
 
 .business .business-content .business-price-discount h5 {
-  font-size: 1.1rem;
   margin-top: 1rem;
 }
 
@@ -852,6 +899,12 @@ nav.globalMenuSp.active {
   left: 5vw;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-top {
+    margin-top: 2rem;
+  }
+}
+
 .business .business-background .bubble-top .bubble-top-large {
   width: 30px;
   height: 30px;
@@ -859,6 +912,13 @@ nav.globalMenuSp.active {
   background-color: #4da2e3;
   margin-left: 1rem;
   margin-top: 0rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-top .bubble-top-large {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .business .business-background .bubble-top .bubble-top-small {
@@ -869,10 +929,24 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-top .bubble-top-small {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .business .business-background .bubble-bottom {
   position: absolute;
   top: 660px;
   left: 85vw;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-bottom {
+    top: 700px;
+    left: 90vw;
+  }
 }
 
 .business .business-background .bubble-bottom .bubble-bottom-large {
@@ -884,6 +958,14 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-bottom .bubble-bottom-large {
+    width: 50px;
+    height: 50px;
+    margin-left: -3rem;
+  }
+}
+
 .business .business-background .bubble-bottom .bubble-bottom-small {
   width: 20px;
   height: 20px;
@@ -891,6 +973,14 @@ nav.globalMenuSp.active {
   background-color: #fff;
   margin-left: 0.2rem;
   margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-bottom .bubble-bottom-small {
+    width: 30px;
+    height: 30px;
+    margin-left: 2rem;
+  }
 }
 
 .business .business-background .bubble-bottom .bubble-bottom-last {
@@ -901,15 +991,35 @@ nav.globalMenuSp.active {
   margin-left: 0rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .bubble-bottom .bubble-bottom-last {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .business .business-background .fish-top {
   position: absolute;
   top: 80px;
   left: 80vw;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .fish-top {
+    top: 100px;
+  }
+}
+
 .business .business-background .fish-top img {
   width: 30px;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-background .fish-top img {
+    width: 50px;
+    margin-bottom: 0;
+  }
 }
 
 .business .business-background .fish-center {
@@ -918,9 +1028,21 @@ nav.globalMenuSp.active {
   left: 75vw;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .fish-center {
+    left: 85vw;
+  }
+}
+
 .business .business-background .fish-center img {
   width: 40px;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-background .fish-center img {
+    width: 55px;
+  }
 }
 
 .business .business-background .fish-bottom {
@@ -934,13 +1056,37 @@ nav.globalMenuSp.active {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-background .fish-bottom img {
+    width: 70px;
+  }
+}
+
 .event {
   margin: 4rem 0;
   position: relative;
 }
 
+@media screen and (min-width: 900px) {
+  .event {
+    margin-top: 12rem;
+  }
+}
+
 .event .event-slider {
   position: relative;
+}
+
+@media screen and (min-width: 900px) {
+  .event .event-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .event .event-slider i {
@@ -966,16 +1112,30 @@ nav.globalMenuSp.active {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .event ul li {
+    width: 45vw;
+    margin-top: 2rem;
+  }
+}
+
 .event ul li img {
   width: 70vw;
   margin: 0 auto;
   border-radius: 10px;
 }
 
+@media screen and (min-width: 900px) {
+  .event ul li img {
+    width: 40vw;
+    height: 28vw;
+    margin-left: 2.5vw;
+  }
+}
+
 .event ul li h4 {
   text-align: center;
   margin-top: 0.5rem;
-  font-size: 1.2rem;
 }
 
 .event ul li .event-schedule {
@@ -984,16 +1144,36 @@ nav.globalMenuSp.active {
   margin-top: 0.5rem;
 }
 
+@media screen and (min-width: 900px) {
+  .event ul li .event-schedule {
+    width: 40vw;
+    margin: 0.5rem auto;
+  }
+}
+
 .event ul li .event-explanation {
   width: 80vw;
   margin: 0 auto;
   margin-top: 0.5rem;
 }
 
+@media screen and (min-width: 900px) {
+  .event ul li .event-explanation {
+    width: 40vw;
+  }
+}
+
 .event .event-background {
   position: absolute;
   top: 100%;
   left: 80vw;
+}
+
+@media screen and (min-width: 900px) {
+  .event .event-background {
+    left: 95vw;
+    top: 101%;
+  }
 }
 
 .event .event-background img {
@@ -1006,6 +1186,12 @@ nav.globalMenuSp.active {
   position: relative;
 }
 
+@media screen and (min-width: 900px) {
+  .guide {
+    margin-top: 12rem;
+  }
+}
+
 .guide .wave {
   margin-top: 1rem;
 }
@@ -1014,6 +1200,13 @@ nav.globalMenuSp.active {
   background-color: #2079bd;
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-container {
+    padding-bottom: 6rem;
+    margin-top: -0.5rem;
+  }
 }
 
 .guide .guide-slider {
@@ -1031,6 +1224,13 @@ nav.globalMenuSp.active {
   display: flex;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-slider .img-wrapper {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
 .guide .guide-slider img {
   width: 60vw;
   height: 60vw;
@@ -1038,6 +1238,13 @@ nav.globalMenuSp.active {
      object-fit: cover;
   border-radius: 50%;
   margin: 7.5vw auto;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-slider img {
+    width: 20vw;
+    height: 20vw;
+  }
 }
 
 .guide .guide-slider .next {
@@ -1068,7 +1275,6 @@ nav.globalMenuSp.active {
 .guide .guide-slider h4 {
   margin-top: 3rem;
   color: #fff;
-  font-size: 1.2rem;
   text-align: center;
   font-family: "YuGoth";
   font-weight: bolder;
@@ -1080,6 +1286,12 @@ nav.globalMenuSp.active {
   color: #fff;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-slider p {
+    width: 20vw;
+  }
+}
+
 .guide .guide-slider .ripples {
   width: 60vw;
   height: 60vw;
@@ -1088,6 +1300,14 @@ nav.globalMenuSp.active {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-slider .ripples {
+    width: 20vw;
+    height: 20vw;
+    margin-top: 2.5vw;
+  }
 }
 
 .guide .guide-slider .guide-dolphin {
@@ -1115,6 +1335,18 @@ nav.globalMenuSp.active {
   background-image: url("img/point6-2.jpg");
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-slider-left {
+    display: inline-block;
+    margin-left: 20vw;
+  }
+  .guide .guide-slider-right {
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 10vw;
+  }
+}
+
 .guide .guide-background .bubble-top {
   position: absolute;
   top: 5rem;
@@ -1131,6 +1363,14 @@ nav.globalMenuSp.active {
   z-index: 4;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-top .bubble-top-large {
+    width: 50px;
+    height: 50px;
+    margin-top: 2rem;
+  }
+}
+
 .guide .guide-background .bubble-top .bubble-top-small {
   width: 20px;
   height: 20px;
@@ -1139,10 +1379,24 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-top .bubble-top-small {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .guide .guide-background .bubble-bottom {
   position: absolute;
-  top: 280px;
+  top: 65vw;
   left: 15vw;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-bottom {
+    top: 90%;
+    left: 5vw;
+  }
 }
 
 .guide .guide-background .bubble-bottom .bubble-bottom-large {
@@ -1154,6 +1408,13 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-bottom .bubble-bottom-large {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .guide .guide-background .bubble-bottom .bubble-bottom-small {
   width: 20px;
   height: 20px;
@@ -1163,12 +1424,28 @@ nav.globalMenuSp.active {
   margin-top: 0;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-bottom .bubble-bottom-small {
+    margin-left: 20px;
+    margin-top: 3rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .guide .guide-background .bubble-bottom .bubble-bottom-last {
   width: 15px;
   height: 15px;
   background-color: #4da2e3;
   margin-top: 1rem;
   margin-left: 0rem;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-background .bubble-bottom .bubble-bottom-last {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .guide .guide-background .fish-top {
@@ -1182,6 +1459,12 @@ nav.globalMenuSp.active {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .fish-top img {
+    width: 60px;
+  }
+}
+
 .guide .guide-background .fish-center {
   position: absolute;
   top: 100px;
@@ -1193,10 +1476,23 @@ nav.globalMenuSp.active {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .fish-center img {
+    width: 80px;
+  }
+}
+
 .guide .guide-background .fish-bottom {
   position: absolute;
   bottom: 280px;
   right: 10vw;
+}
+
+@media screen and (min-width: 900px) {
+  .guide .guide-background .fish-bottom {
+    right: 3vw;
+    bottom: 5%;
+  }
 }
 
 .guide .guide-background .fish-bottom img {
@@ -1204,7 +1500,26 @@ nav.globalMenuSp.active {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .guide .guide-background .fish-bottom img {
+    width: 100px;
+    margin-bottom: 0;
+  }
+}
+
 .access {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 900px) {
+  .access {
+    margin-top: 8rem;
+  }
+}
+
+.access .flex {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 4rem;
 }
 
@@ -1212,6 +1527,13 @@ nav.globalMenuSp.active {
   margin: 2rem auto;
   display: block;
   width: 80vw;
+}
+
+@media screen and (min-width: 900px) {
+  .access table {
+    width: initial;
+    margin-top: 100px;
+  }
 }
 
 .access table th {
@@ -1229,6 +1551,13 @@ nav.globalMenuSp.active {
   width: 100%;
 }
 
+@media screen and (min-width: 900px) {
+  .access iframe {
+    width: 50vw;
+    height: 400px;
+  }
+}
+
 footer .raindrops {
   height: 2em;
   margin-top: -1.5em;
@@ -1236,11 +1565,69 @@ footer .raindrops {
 
 footer .footer-wrapper {
   background-color: #2079bd;
+  margin-top: -0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  footer .flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+footer .footer-list {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  footer .footer-list {
+    padding: 2rem 0;
+    display: block;
+    background-color: #2079bd;
+    margin: 0 0.5rem;
+  }
+  footer .footer-list p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  footer .footer-list p::before {
+    display: block;
+    position: absolute;
+    content: "▼";
+    width: 0.5em;
+    height: 0.5em;
+    top: 0;
+    left: 0;
+  }
+  footer .footer-list li {
+    position: relative;
+    padding: 0.1em;
+    padding-left: 1em;
+  }
+  footer .footer-list li::before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0.7em;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 0.3em;
+    height: 0.3em;
+    border-top: 1px solid #222;
+    border-right: 1px solid #222;
+  }
+  footer .footer-list a:hover {
+    color: #fff;
+  }
 }
 
 footer .footer-copyright {
   text-align: center;
-  margin: 3rem auto 0 auto;
-  padding-bottom: 1rem;
+  padding: 3rem 0 1rem 0;
+  background-color: #2079bd;
 }
 /*# sourceMappingURL=index.css.map */
