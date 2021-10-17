@@ -859,6 +859,13 @@ nav.globalMenuSp.active {
   text-align: center;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content .business-price-discount {
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .business .business-content .business-price-discount .discount-day {
   background-color: #ffce48;
   border-radius: 50%;
@@ -1156,6 +1163,12 @@ nav.globalMenuSp.active {
   margin-top: 0.5rem;
 }
 
+@media screen and (min-width: 900px) {
+  .event ul li h4 {
+    margin-top: 1rem;
+  }
+}
+
 .event ul li .event-schedule {
   text-align: center;
   font-weight: bold;
@@ -1177,7 +1190,8 @@ nav.globalMenuSp.active {
 
 @media screen and (min-width: 900px) {
   .event ul li .event-explanation {
-    width: 40vw;
+    width: 400px;
+    margin-top: 0.5rem;
   }
 }
 

@@ -701,6 +701,10 @@ nav.globalMenuSp.active {
         .business-price-discount {
             margin-top: 1rem;
             text-align: center;
+            @include mq(lg) {
+                margin-top: 4rem;
+                padding-bottom: 3rem;
+            }
             .discount-day {
                 background-color: $sub_color_yellow;
                 border-radius: 50%;
@@ -922,6 +926,9 @@ nav.globalMenuSp.active {
             h4 {
                 text-align: center;
                 margin-top: 0.5rem;
+                @include mq(lg) {
+                    margin-top: 1rem;
+                }
             }
             .event-schedule {
                 text-align: center;
@@ -937,7 +944,8 @@ nav.globalMenuSp.active {
                 margin: 0 auto;
                 margin-top: 0.5rem;
                 @include mq(lg) {
-                    width: 40vw;
+                    width: 400px;
+                    margin-top: 0.5rem;
                 }
             }
         }
