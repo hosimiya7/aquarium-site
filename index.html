@@ -27,9 +27,18 @@
 <body>
 
     <header>
-        <div class="header-wrapper">
+        <div class="header-wrapper" id="top">
             <div class="header-top flex">
                 <img src="img/logo.png" alt="" class="logo">
+                <div class="header-heading">
+                    <ul class="flex">
+                        <li><a href="#top">トップページ</a></li>
+                        <li><a href="#business">営業時間・料金</a></li>
+                        <li><a href="#event">イベント情報</a></li>
+                        <li><a href="#guide">館内案内</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                    </ul>
+                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -91,8 +100,11 @@
                     </div>
                 </div>
 
-
-                <div class="fish">
+                <div class="fish-top">
+                    <img src="img/fish-yellow.png" alt="" class="header-fish-yellow">
+                    <img src="img/fish-orange.png" alt="" class="header-fish-orange">
+                </div>
+                <div class="fish-bottom">
                     <img src="img/fish-orange.png" alt="" class="header-fish-orange">
                     <img src="img/fish-yellow.png" alt="" class="header-fish-yellow">
                 </div>
@@ -102,7 +114,7 @@
 
     <main>
         <div class="main-wrapper">
-            <div class="business container">
+            <div class="business container" id="business">
                 <h3>
                     営業時間・料金
                 </h3>
@@ -281,7 +293,7 @@
                     </div>
                 </div>
             </div>
-            <div class="event container">
+            <div class="event container" id="event">
                 <h3>
                     イベント情報
                 </h3>
@@ -359,7 +371,7 @@
                     </div>
                 </div>
             </div>
-            <div class="guide container">
+            <div class="guide container" id="guide">
                 <h3>
                     館内案内
                 </h3>
@@ -404,7 +416,6 @@
 
                 </div>
                 <div class="guide-container">
-
                     <div class="guide-swiper-container">
                         <!-- 全スライドをまとめるラッパー -->
                         <div class="guide-swiper-wrapper">
@@ -529,7 +540,7 @@
                     </div>
                 </div>
             </div>
-            <div class="access container">
+            <div class="access container" id="access">
                 <h3>
                     アクセス
                 </h3>

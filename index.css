@@ -11,13 +11,19 @@
 .hamburger {
   display: block;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   right: 13px;
   top: 12px;
   width: 42px;
   height: 42px;
   cursor: pointer;
   text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburger span {
@@ -75,7 +81,7 @@
 
 nav.globalMenuSp {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   color: #000;
@@ -125,10 +131,17 @@ nav.globalMenuSp.active {
 }
 
 /**
- スライダー
+ ヘッダースライダー
 */
 .swiper-container {
   width: 100%;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .swiper-container {
+    margin-top: -2rem;
+  }
 }
 
 .swiper-container img {
@@ -138,6 +151,19 @@ nav.globalMenuSp.active {
   border-radius: 54% 46% 62% 38% / 51% 45% 55% 49%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 560px) {
+  .swiper-container img {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .swiper-container img {
+    width: 80vw;
+    height: 65vh;
+  }
 }
 
 /*====================================================================
@@ -302,6 +328,12 @@ nav.globalMenuSp.active {
   font-family: "YuGoth";
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /**
  ヘッダー
 */
@@ -309,9 +341,44 @@ nav.globalMenuSp.active {
   height: 85vh;
 }
 
+@media screen and (min-width: 560px) {
+  .header-wrapper {
+    height: 100vh;
+  }
+}
+
+.header-wrapper .header-top {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-wrapper .header-heading {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-heading {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    z-index: 4;
+    font-size: 1.2rem;
+  }
+  .header-wrapper .header-heading li {
+    margin-left: 2rem;
+  }
+}
+
 .header-wrapper .logo {
   width: 80px;
   margin: 1rem 0 0 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .logo {
+    width: 160px;
+  }
 }
 
 .header-wrapper .header-content {
@@ -329,11 +396,31 @@ nav.globalMenuSp.active {
   font-style: normal;
 }
 
+@media screen and (min-width: 900px) {
+  .header-wrapper h2 {
+    font-size: 3.5rem;
+    top: 4rem;
+    left: 22vw;
+  }
+}
+
 .header-wrapper .header-img {
   margin-top: -5rem;
   position: relative;
   overflow: hidden;
   height: 45vw;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-img {
+    margin-top: -7rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-img {
+    margin-top: -16rem;
+  }
 }
 
 .header-wrapper .header-img .header-img-left {
@@ -343,6 +430,19 @@ nav.globalMenuSp.active {
   -o-object-fit: cover;
      object-fit: cover;
   vertical-align: top;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-img .header-img-left {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-img .header-img-left {
+    margin-top: 4rem;
+  }
 }
 
 .header-wrapper .header-img .header-img-right {
@@ -355,10 +455,37 @@ nav.globalMenuSp.active {
   right: -1rem;
 }
 
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-img .header-img-right {
+    width: 35vw;
+    height: 35vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-img .header-img-right {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
 .header-wrapper .header-background .bubble-top {
   position: absolute;
   top: 1rem;
-  left: 65vw;
+  left: 50vw;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-top {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-background .bubble-top {
+    left: 15vw;
+    top: 3rem;
+  }
 }
 
 .header-wrapper .header-background .bubble-top .bubble-top-small {
@@ -366,6 +493,13 @@ nav.globalMenuSp.active {
   height: 20px;
   border-radius: 50%;
   background-color: #4da2e3;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-top .bubble-top-small {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .header-wrapper .header-background .bubble-top .bubble-top-large {
@@ -377,10 +511,23 @@ nav.globalMenuSp.active {
   margin-top: 0.5rem;
 }
 
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-top .bubble-top-large {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .header-wrapper .header-background .bubble-bottom {
   position: absolute;
   top: 320px;
   left: 50vw;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-bottom {
+    top: 70vh;
+  }
 }
 
 .header-wrapper .header-background .bubble-bottom .bubble-bottom-large {
@@ -392,6 +539,13 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-bottom .bubble-bottom-large {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .header-wrapper .header-background .bubble-bottom .bubble-bottom-small {
   width: 20px;
   height: 20px;
@@ -401,24 +555,66 @@ nav.globalMenuSp.active {
   margin-top: 1.5rem;
 }
 
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .bubble-bottom .bubble-bottom-small {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .header-wrapper .header-background .bubble-bottom .bubble-bottom-last {
   background-color: #4da2e3;
   margin-top: 2rem;
   margin-left: -1rem;
 }
 
-.header-wrapper .header-background .fish {
+.header-wrapper .header-background .fish-top {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .fish-top {
+    top: 5vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-wrapper .header-background .fish-top {
+    top: 10vh;
+  }
+}
+
+.header-wrapper .header-background .fish-top .header-fish-yellow {
+  width: 60px;
+  margin-top: 3rem;
+}
+
+.header-wrapper .header-background .fish-top .header-fish-orange {
+  width: 40px;
+  margin-bottom: 2rem;
+}
+
+.header-wrapper .header-background .fish-bottom {
   position: absolute;
   top: 350px;
   left: 20px;
 }
 
-.header-wrapper .header-background .fish .header-fish-orange {
+@media screen and (min-width: 560px) {
+  .header-wrapper .header-background .fish-bottom {
+    top: 500px;
+    left: 20vw;
+  }
+}
+
+.header-wrapper .header-background .fish-bottom .header-fish-orange {
   width: 60px;
   margin-bottom: 2rem;
 }
 
-.header-wrapper .header-background .fish .header-fish-yellow {
+.header-wrapper .header-background .fish-bottom .header-fish-yellow {
   width: 40px;
   margin-top: 3rem;
 }
@@ -434,16 +630,34 @@ nav.globalMenuSp.active {
   font-style: normal;
 }
 
+@media screen and (min-width: 900px) {
+  .container h3 {
+    font-size: 2rem;
+  }
+}
+
 .container h4 {
   font-family: irohamaru, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
+@media screen and (min-width: 900px) {
+  .container h4 {
+    font-size: 1.75rem;
+  }
+}
+
 .container h5 {
   font-family: irohamaru, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@media screen and (min-width: 900px) {
+  .container h5 {
+    font-size: 1.2rem;
+  }
 }
 
 .business {
@@ -561,6 +775,7 @@ nav.globalMenuSp.active {
 
 .business .business-content .business-price h4 {
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .business .business-content .business-price .table-head {
@@ -665,7 +880,7 @@ nav.globalMenuSp.active {
   height: 30px;
   border-radius: 50%;
   background-color: #4da2e3;
-  margin-left: 0rem;
+  margin-left: -1rem;
   margin-top: 1rem;
 }
 
@@ -674,7 +889,7 @@ nav.globalMenuSp.active {
   height: 20px;
   border-radius: 50%;
   background-color: #fff;
-  margin-left: 1rem;
+  margin-left: 0.2rem;
   margin-top: 1.5rem;
 }
 
@@ -830,7 +1045,7 @@ nav.globalMenuSp.active {
   top: 50%;
   right: 5vw;
   background-color: #fff;
-  z-index: 3;
+  z-index: 2;
   padding: 1rem;
   border-radius: 50%;
 }
@@ -839,7 +1054,7 @@ nav.globalMenuSp.active {
   position: absolute;
   top: 50%;
   left: 5vw;
-  z-index: 3;
+  z-index: 2;
   padding: 1rem;
   border-radius: 50%;
   background-color: #fff;
@@ -911,7 +1126,7 @@ nav.globalMenuSp.active {
   height: 30px;
   border-radius: 50%;
   background-color: #4da2e3;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   margin-top: 0rem;
   z-index: 4;
 }

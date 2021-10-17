@@ -23,8 +23,8 @@ $font-title: irohamaru, sans-serif;
 $font-text: "YuGoth";
 
 $breakpoints: (
-    "md": "screen and (mix-width: 560px)",
-    "lg": "screen and (m1x-width: 900px)",
+    "md": "screen and (min-width: 560px)",
+    "lg": "screen and (min-width: 900px)",
 ) !default;
 
 @mixin mq($breakpoint: md) {
@@ -37,13 +37,16 @@ $breakpoints: (
 .hamburger {
     display: block;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     right: 13px;
     top: 12px;
     width: 42px;
     height: 42px;
     cursor: pointer;
     text-align: center;
+    @include mq(lg) {
+        display: none;
+    }
 }
 .hamburger span {
     display: block;
@@ -104,7 +107,7 @@ $breakpoints: (
 
 nav.globalMenuSp {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     color: #000;
@@ -149,17 +152,28 @@ nav.globalMenuSp.active {
 }
 
 /**
- スライダー
+ ヘッダースライダー
 */
 
 .swiper-container {
     width: 100%;
+    margin-top: 2rem;
+    @include mq(lg) {
+        margin-top: -2rem;
+    }
     img {
         width: 90vw;
         height: 250px;
         margin: 0 auto;
         border-radius: 54% 46% 62% 38% / 51% 45% 55% 49%;
         object-fit: cover;
+        @include mq(md) {
+            height: 60vh;
+        }
+        @include mq(lg) {
+            width: 80vw;
+            height: 65vh;
+        }
     }
 }
 
@@ -292,15 +306,41 @@ nav.globalMenuSp.active {
     font-family: $font-text;
 }
 
+.flex {
+    display: flex;
+}
+
 /**
  ヘッダー
 */
 
 .header-wrapper {
     height: 85vh;
+    @include mq(md) {
+        height: 100vh;
+    }
+    .header-top {
+        justify-content: space-between;
+    }
+    .header-heading{
+        display: none;
+        @include mq(lg) {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-right: 2rem;
+            z-index: 4;
+            font-size: 1.2rem;
+            li{
+                margin-left: 2rem;
+            }
+        }
+    }
     .logo {
         width: 80px;
         margin: 1rem 0 0 1rem;
+        @include mq(lg) {
+            width: 160px;
+        }
     }
     .header-content {
         position: relative;
@@ -314,18 +354,37 @@ nav.globalMenuSp.active {
         font-family: $font-title;
         font-weight: 400;
         font-style: normal;
+        @include mq(lg) {
+            font-size: 3.5rem;
+            top: 4rem;
+            left: 22vw;
+        }
+
     }
     .header-img {
         margin-top: -5rem;
         position: relative;
         overflow: hidden;
         height: 45vw;
+        @include mq(md) {
+            margin-top: -7rem;
+        }
+        @include mq(lg) {
+           margin-top: -16rem;
+        }
         .header-img-left {
             width: 30vw;
             height: 30vw;
             border-radius: 50%;
             object-fit: cover;
             vertical-align: top;
+            @include mq(md) {
+                width: 25vw;
+                height: 25vw;
+            }
+            @include mq(lg) {
+                margin-top: 4rem;
+            }
         }
         .header-img-right {
             width: 45vw;
@@ -335,18 +394,37 @@ nav.globalMenuSp.active {
             object-fit: cover;
             position: absolute;
             right: -1rem;
+            @include mq(md) {
+                width: 35vw;
+                height: 35vw;
+            }
+            @include mq(lg) {
+                width: 30vw;
+                height: 30vw;
+            }
         }
     }
     .header-background {
         .bubble-top {
             position: absolute;
             top: 1rem;
-            left: 65vw;
+            left: 50vw;
+            @include mq(md) {
+                margin-top: 0;
+            }
+            @include mq(lg) {
+                left: 15vw;
+                top: 3rem;
+            }
             .bubble-top-small {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $sub_color_lightBlue;
+                @include mq(md) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
             .bubble-top-large {
                 width: 30px;
@@ -355,12 +433,19 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-left: 1rem;
                 margin-top: 0.5rem;
+                @include mq(md) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
         .bubble-bottom {
             position: absolute;
             top: 320px;
             left: 50vw;
+            @include mq(md) {
+                top: 70vh;
+            }
             .bubble-bottom-large {
                 width: 30px;
                 height: 30px;
@@ -368,6 +453,10 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_lightBlue;
                 margin-left: -2rem;
                 margin-top: 1rem;
+                @include mq(md) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
             .bubble-bottom-small {
                 width: 20px;
@@ -376,6 +465,10 @@ nav.globalMenuSp.active {
                 background-color: $sub_color_blue;
                 margin-left: 2rem;
                 margin-top: 1.5rem;
+                @include mq(md) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
             .bubble-bottom-last {
                 background-color: $sub_color_lightBlue;
@@ -383,10 +476,33 @@ nav.globalMenuSp.active {
                 margin-left: -1rem;
             }
         }
-        .fish {
+        .fish-top {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            @include mq(md) {
+                top: 5vh;
+            }
+            @include mq(lg) {
+                top: 10vh;
+            }
+            .header-fish-yellow {
+                width: 60px;
+                margin-top: 3rem;
+            }
+            .header-fish-orange {
+                width: 40px;
+                margin-bottom: 2rem;
+            }
+        }
+        .fish-bottom {
             position: absolute;
             top: 350px;
             left: 20px;
+            @include mq(md) {
+                top: 500px;
+                left: 20vw;
+            }
             .header-fish-orange {
                 width: 60px;
                 margin-bottom: 2rem;
@@ -410,16 +526,25 @@ nav.globalMenuSp.active {
         font-family: $font-title;
         font-weight: 500;
         font-style: normal;
+        @include mq(lg) {
+            font-size: 2rem;
+        }
     }
     h4 {
         font-family: $font-title;
         font-weight: 500;
         font-style: normal;
+        @include mq(lg) {
+            font-size: 1.75rem;
+        }
     }
     h5 {
         font-family: $font-title;
         font-weight: 400;
         font-style: normal;
+        @include mq(lg) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -518,6 +643,7 @@ nav.globalMenuSp.active {
         .business-price {
             h4 {
                 margin-top: 3rem;
+                margin-bottom: 1rem;
             }
             .table-head {
                 background-color: #ddd;
@@ -617,7 +743,7 @@ nav.globalMenuSp.active {
                 height: 30px;
                 border-radius: 50%;
                 background-color: $sub_color_lightBlue;
-                margin-left: 0rem;
+                margin-left: -1rem;
                 margin-top: 1rem;
             }
             .bubble-bottom-small {
@@ -625,7 +751,7 @@ nav.globalMenuSp.active {
                 height: 20px;
                 border-radius: 50%;
                 background-color: $main_color;
-                margin-left: 1rem;
+                margin-left: 0.2rem;
                 margin-top: 1.5rem;
             }
             .bubble-bottom-last {
@@ -759,7 +885,7 @@ nav.globalMenuSp.active {
             top: 50%;
             right: 5vw;
             background-color: $main_color;
-            z-index: 3;
+            z-index: 2;
             padding: 1rem;
             border-radius: 50%;
         }
@@ -767,7 +893,7 @@ nav.globalMenuSp.active {
             position: absolute;
             top: 50%;
             left: 5vw;
-            z-index: 3;
+            z-index: 2;
             padding: 1rem;
             border-radius: 50%;
             background-color: $main_color;
@@ -828,7 +954,7 @@ nav.globalMenuSp.active {
                 height: 30px;
                 border-radius: 50%;
                 background-color: $sub_color_lightBlue;
-                margin-left: 1rem;
+                margin-left: 0.5rem;
                 margin-top: 0rem;
                 z-index: 4;
             }
