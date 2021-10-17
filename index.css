@@ -874,15 +874,33 @@ nav.globalMenuSp.active {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .business .business-content .business-price-discount h5 {
+    font-size: 2rem;
+  }
+}
+
 .business .business-content .business-price-discount .discount-content {
   margin-top: 0.2rem;
   padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-content .business-price-discount .discount-content {
+    font-size: 1.5rem;
+  }
 }
 
 .business .business-content .business-price-discount .discount-content .conspicuous {
   font-size: 1.5rem;
   color: #ffce48;
   font-weight: bold;
+}
+
+@media screen and (min-width: 900px) {
+  .business .business-content .business-price-discount .discount-content .conspicuous {
+    font-size: 2.5rem;
+  }
 }
 
 .business .business-content .business-price-discount .discount-content .dots {
