@@ -197,7 +197,7 @@ nav.globalMenuSp.active {
 }
 
 .s_07 .accordion_one .accordion_header:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .s_07 .accordion_one .accordion_header .i_box {
@@ -245,11 +245,12 @@ nav.globalMenuSp.active {
   transform: rotate(-360deg);
 }
 
-.s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+.s_07 .accordion_one .accordion_header .i_box .one_i:before,
+.s_07 .accordion_one .accordion_header .i_box .one_i:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  content: '';
+  content: "";
   background-color: #222;
   border-radius: 10px;
   width: 18px;
@@ -864,7 +865,18 @@ nav.globalMenuSp.active {
   color: #fff;
 }
 
+.guide .guide-slider .ripples {
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  margin: 7.5vw auto;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 .guide .guide-slider .guide-dolphin {
+  border-radius: 50%;
   background-image: url("img/point1.jpg");
 }
 
@@ -886,15 +898,6 @@ nav.globalMenuSp.active {
 
 .guide .guide-slider .guide-night {
   background-image: url("img/point6-2.jpg");
-}
-
-.guide .guide-slider .ripples {
-  width: 60vw;
-  height: 60vw;
-  border-radius: 50%;
-  margin: 7.5vw auto;
-  background-size: cover;
-  background-position: center;
 }
 
 .guide .guide-background .bubble-top {

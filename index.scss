@@ -170,8 +170,8 @@ nav.globalMenuSp.active {
     max-width: 1024px;
     margin: 0 auto;
     display: block;
-  }
-  .s_07 .accordion_one .accordion_header {
+}
+.s_07 .accordion_one .accordion_header {
     background-color: $sub_color_blue;
     border-bottom: 1px solid $font_color_black;
     color: $font_color_black;
@@ -185,35 +185,35 @@ nav.globalMenuSp.active {
     transition-duration: 0.2s;
     // @include mq(sm){
     // }
-  }
-  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+}
+.s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
     background-color: $sub_color_blue;
-    &:hover{
-      background-color: $sub_color_lightBlue;
+    &:hover {
+        background-color: $sub_color_lightBlue;
     }
-  }
-  .s_07 .accordion_one:nth-of-type(2) .accordion_header {
+}
+.s_07 .accordion_one:nth-of-type(2) .accordion_header {
     background-color: $sub_color_blue;
-  }
-  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+}
+.s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
     background-color: $sub_color_blue;
-    &:hover{
-      background-color: $sub_color_lightBlue;
+    &:hover {
+        background-color: $sub_color_lightBlue;
     }
-  }
-  .s_07 .accordion_one:nth-of-type(3) .accordion_header {
+}
+.s_07 .accordion_one:nth-of-type(3) .accordion_header {
     background-color: $sub_color_blue;
-  }
-  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+}
+.s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
     background-color: $sub_color_blue;
-    &:hover{
-      background-color: $sub_color_lightBlue;
+    &:hover {
+        background-color: $sub_color_lightBlue;
     }
-  }
-  .s_07 .accordion_one .accordion_header:hover {
-    opacity: .8;
-  }
-  .s_07 .accordion_one .accordion_header .i_box {
+}
+.s_07 .accordion_one .accordion_header:hover {
+    opacity: 0.8;
+}
+.s_07 .accordion_one .accordion_header .i_box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,8 +229,8 @@ nav.globalMenuSp.active {
     transform: rotate(45deg);
     transform-origin: center center;
     transition-duration: 0.2s;
-  }
-  .s_07 .accordion_one .accordion_header .i_box .one_i {
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i {
     display: block;
     width: 18px;
     height: 18px;
@@ -239,14 +239,15 @@ nav.globalMenuSp.active {
     transform-origin: center center;
     transition-duration: 0.2s;
     position: relative;
-  }
-  .s_07 .accordion_one .accordion_header.open .i_box {
+}
+.s_07 .accordion_one .accordion_header.open .i_box {
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
-  }
-  .s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i:before,
+.s_07 .accordion_one .accordion_header .i_box .one_i:after {
     display: flex;
-    content: '';
+    content: "";
     background-color: $font_color_black;
     border-radius: 10px;
     width: 18px;
@@ -257,31 +258,31 @@ nav.globalMenuSp.active {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     transform-origin: center center;
-  }
-  .s_07 .accordion_one .accordion_header .i_box .one_i:before {
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i:before {
     width: 4px;
     height: 18px;
     top: 0;
     left: 7px;
-  }
-  .s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+}
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
     content: none;
-  }
-  .s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+}
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-  }
-  .s_07 .accordion_one .accordion_inner {
+}
+.s_07 .accordion_one .accordion_inner {
     display: none;
     padding: 0;
     box-sizing: border-box;
-  }
-  .s_07 .accordion_one .accordion_inner .box_one {
+}
+.s_07 .accordion_one .accordion_inner .box_one {
     height: 300px;
-  }
-  .s_07 .accordion_one .accordion_inner p.txt_a_ac {
+}
+.s_07 .accordion_one .accordion_inner p.txt_a_ac {
     margin: 0;
-  }
+}
 
 /**
  全体
@@ -788,7 +789,17 @@ nav.globalMenuSp.active {
             margin: 1rem auto 0 auto;
             color: $font_color_white;
         }
+        .ripples {
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            margin: 7.5vw auto;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
         .guide-dolphin {
+            border-radius: 50%;
             background-image: url("img/point1.jpg");
         }
         .guide-jellyfish {
@@ -805,14 +816,6 @@ nav.globalMenuSp.active {
         }
         .guide-night {
             background-image: url("img/point6-2.jpg");
-        }
-        .ripples {
-            width: 60vw;
-            height: 60vw;
-            border-radius: 50%;
-            margin: 7.5vw auto;
-            background-size: cover;
-            background-position: center;
         }
     }
     .guide-background {
@@ -910,21 +913,21 @@ nav.globalMenuSp.active {
             text-align: left;
         }
     }
-    iframe{
+    iframe {
         height: 250px;
         width: 100%;
     }
 }
 
-footer{
-    .raindrops{
+footer {
+    .raindrops {
         height: 2em;
         margin-top: -1.5em;
     }
-    .footer-wrapper{
+    .footer-wrapper {
         background-color: $sub_color_blue;
     }
-    .footer-copyright{
+    .footer-copyright {
         text-align: center;
         margin: 3rem auto 0 auto;
         padding-bottom: 1rem;
