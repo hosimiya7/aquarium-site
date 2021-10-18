@@ -563,6 +563,9 @@ nav.globalMenuSp.active {
         h4 {
             color: $font_color_white;
             text-align: center;
+            @include mq(lg) {
+                margin-bottom: 2rem;
+            }
         }
         h5 {
             color: $font_color_white;
@@ -878,7 +881,7 @@ nav.globalMenuSp.active {
     margin: 4rem 0;
     position: relative;
     @include mq(lg) {
-        margin-top: 12rem;
+        margin-top: 8rem;
     }
     .event-slider {
         position: relative;
@@ -955,7 +958,7 @@ nav.globalMenuSp.active {
         top: 100%;
         left: 80vw;
         @include mq(lg) {
-            left: 95vw;
+            left: 92vw;
             top: 101%;
         }
         img {
@@ -1269,6 +1272,7 @@ footer {
             display: block;
             background-color: $sub_color_blue;
             margin: 0 0.5rem;
+            text-align: center;
             p {
                 font-weight: bold;
                 margin-bottom: 1rem;
@@ -1288,6 +1292,7 @@ footer {
                 position: relative;
                 padding: 0.1em;
                 padding-left: 1em;
+                text-align: center;
                 &::before {
                     display: block;
                     position: absolute;
@@ -1314,5 +1319,6 @@ footer {
         text-align: center;
         padding: 3rem 0 1rem 0;
         background-color: $sub_color_blue;
+        margin-top: -0.5rem;
     }
 }
