@@ -29,18 +29,6 @@ $('.slider').slick({
 
 });
 
-// $('.event-slider').slick({
-//     infinite: true,
-//     speed: 1000,
-//     slidesToShow: 1,
-//     adaptiveHeight: true,
-//     autoplay: true,
-//     autoplaySpeed: 2500,
-//     arrows: true,
-//     prevArrow: '<div class="prev"><i class="fas fa-arrow-circle-left"></i></div>',
-//     nextArrow: '<div class="next"><i class="fas fa-arrow-circle-right"></i></div>',
-// });
-
  function checkBreakPoint() {
 	w = $(window).width();
 	if (w <= 900) {
